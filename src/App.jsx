@@ -11,6 +11,7 @@ import ChatMessage from './components/ChatMessage'
 function App() {
   const [chatHistory, setChatHistory] = useState([])
   const chatBodyRef = useRef(null);
+  
 
   // Scroll to the bottom whenever chatHistory changes
   useEffect(() => {
@@ -50,7 +51,7 @@ function App() {
   return (
 
     <>
-      <div className="container w-1/2 lg:w-1/4 m-auto shadow-2xl rounded-b-xl">
+      <div className="container lg:w-1/4 m-auto shadow-2xl rounded-b-xl h-screen lg:h-[95vh]">
 
         <div className="p-3 chat-header flex bg-purple-600 justify-between rounded-t-xl">
           <div className="header-info flex items-center gap-3">
@@ -60,7 +61,7 @@ function App() {
           <button className=''><FaChevronDown /></button>
         </div>
 
-        <div ref={chatBodyRef} className='chat-body h-[70vh] overflow-y-auto scrollbar-transparent bg-scroll p-4 flex flex-col gap-4'>
+        <div ref={chatBodyRef} className='chat-body lg:h-[82%] h-[87%] overflow-y-auto scrollbar-transparent bg-scroll p-4 flex flex-col gap-4'>
           <div className='message bot-message flex items-end gap-3'>
             <TbMessageChatbot className='p-1 text-2xl rounded-full bg-purple-500 text-white' />
             <p className="message-text bg-gray-200 p-2 rounded-t-xl rounded-br-xl">
@@ -73,7 +74,7 @@ function App() {
 
         </div>
 
-        <div className='chat-footer p-2 '>
+        <div className='chat-footer p-2'>
           <ChatForm chatHistory={chatHistory} setChatHistory={setChatHistory} generatBotResponse={generatBotResponse} />
         </div>
       </div>
