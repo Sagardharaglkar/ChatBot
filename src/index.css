@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* body{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+} */
+
+@layer utilities {
+  /* Customize the scrollbar */
+  .scrollbar-transparent::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+
+  .scrollbar-transparent::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track */
+  }
+
+  .scrollbar-transparent::-webkit-scrollbar-thumb {
+    background: transparent; /* Semi-transparent thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+  }
+
+  .scrollbar-transparent::-webkit-scrollbar-thumb:hover {
+    background: transparent; /* Slightly darker on hover */
+  }
+}
